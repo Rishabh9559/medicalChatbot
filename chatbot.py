@@ -90,8 +90,8 @@ st.title("🩺 Doctor-Patient Medical Chat")
 st.markdown("#### Welcome to your AI medical assistant")
 
 
-doctor_avatar = Image.open("images\doctor.png")
-patient_avatar = Image.open("images\patient.png")
+# patient_avatar = Image.open("images\patient.png")
+# doctor_avatar = Image.open("images\doctor.png")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -99,10 +99,10 @@ if "messages" not in st.session_state:
 
 for msg in st.session_state.messages:
     if msg["role"] == "user":
-        with st.chat_message("patient", avatar=patient_avatar):
+        with st.chat_message("patient", avatar="https://bit.ly/4gKRmBB"):
             st.markdown(f"<div style='background:#e8f5e9;color:#003300;padding:10px;border-radius:12px'>{msg['content']}</div>", unsafe_allow_html=True)
     elif msg["role"] == "doctor":
-        with st.chat_message("doctor", avatar=doctor_avatar):
+        with st.chat_message("doctor", avatar="http://bit.ly/4nveBSE"):
             st.markdown(f"<div style='background:#e0f7fa;color:#003300;padding:10px;border-radius:12px'>{msg['content']}</div>", unsafe_allow_html=True)
 
 
@@ -110,14 +110,14 @@ for msg in st.session_state.messages:
 if user_query := st.chat_input("Describe your symptoms..."):
   
     st.session_state.messages.append({"role": "user", "content": user_query})
-    with st.chat_message("patient", avatar=patient_avatar):
+    with st.chat_message("patient", avatar="https://bit.ly/4gKRmBB"):
         st.markdown(f"<div style='background:#e8f5e9;color:#003300;padding:10px;border-radius:12px'>{user_query}</div>", unsafe_allow_html=True)
 
     # Retrieve context + generate answer
     retrieved_context = retrieve_context(user_query, top_k=5)
     final_answer = generate_answer(user_query, retrieved_context)
 
-    with st.chat_message("doctor", avatar=doctor_avatar):
+    with st.chat_message("doctor", avatar="http://bit.ly/4nveBSE"):
         st.markdown(f"<div style='background:#e0f7fa;color:#003300;padding:10px;border-radius:12px'>{final_answer}</div>", unsafe_allow_html=True)
         if retrieved_context:
             for i, doc in enumerate(retrieved_context, start=1):
