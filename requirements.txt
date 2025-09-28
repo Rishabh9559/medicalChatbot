@@ -1,5 +1,5 @@
 python-dotenv
 google-generativeai
-pinecone-client
+pinecone
 streamlit
 Pillow
