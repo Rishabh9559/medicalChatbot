@@ -1,4 +1,4 @@
-# 🩺 Medical Chatbot (RAG + Gemini + Pinecone)
+# Medical Chatbot (RAG + Gemini + Pinecone)
 
 A Retrieval-Augmented Generation (RAG) medical information assistant that uses:
 - Google Gemini (Generative + Embeddings)
@@ -181,6 +181,9 @@ Features:
 - Chat-style interface
 - Persistent session state
 - Distinct avatars for patient (user) and doctor (assistant)
+
+### WorkFlow Diagram
+<img src="https://github.com/user-attachments/assets/ce0e2a5e-52eb-4fac-abd6-88ef0ed757c7" alt="workflow diagram" width="600" height="600" >
 
 
 ### Final Reminder
