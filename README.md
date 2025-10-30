@@ -10,7 +10,10 @@ A Retrieval-Augmented Generation (RAG) medical information assistant that uses:
 
 ---
 
+## Demo 
 
+  ![LightRAG doctor demo](https://github.com/Rishabh9559/LightRAG/blob/main/demo.jpg)
+  
 ## 1. Overview
 This chatbot retrieves medically relevant context from a Pinecone vector index and synthesizes an answer with Gemini. It is designed to:
 - Provide structured, cautious medical information.
